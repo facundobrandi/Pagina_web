@@ -1,0 +1,270 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+/*CODIGO DEL MENU*/
+
+html{
+    scroll-behavior: smooth;
+}
+.header{
+    background-color: rgb(209, 47, 47);
+    min-height: 60px;
+ }
+.logo{
+   color: #fff;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   float: left;
+   font-size: 25px;
+   font-weight: bold;
+   padding: 15px;
+   transition: all .5s;
+}
+.logo span{
+   color: #333;
+}
+nav{
+   float: right;  
+   padding: 15px; 
+}
+nav ul{
+list-style: none;
+}
+nav ul li{
+display: inline-block;
+margin-right: 15px;
+text-transform: capitalize;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+nav a{
+   text-decoration: none;
+   color: #fff;
+   font-size: 25px;
+   transition: all .2s;
+}
+nav a:hover{
+    color: rgb(85, 83, 83);
+    transform: translate(5px,5px);
+}
+.logo:hover{
+    font-size: 35px;
+    height: 60px;
+    width: 400px;
+    background-color: rgba(226, 64, 43, 0.466);
+    transform: skew(20deg);
+    transform: rotate(-10deg);
+}
+
+/* CODIGO DE LA PAGINA DE NOSOTROS */
+.Nosotros_texto{     
+    color: cornsilk;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 20px;
+}
+.Nosotros_texto .Nosotros_titulo{
+    font-size: 90px    ;
+}
+.Nosotros_texto .Nosotros_text{
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+.Nosotros_Proyectos{
+    color: cornsilk;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 20px;
+}
+.Nosotros_Proyectos .video{
+    padding: 10px;
+    margin: 15px;
+    border:solid cornsilk;
+}
+
+
+/* CODIGO DE LA PAGINA DE PRODUCTOS*/
+
+$base-color: rgb(124, 62, 4);
+
+@for $in from 1 through 5 {
+    .h2-#{$in} {
+        background-color: lighten($base-color, $in * 10%);
+        text-align:left;
+        color: cornsilk;
+        // background-color: darken($base-color, $in * 10%);
+    }
+}
+
+
+
+body{
+    background: linear-gradient(rgb(209, 47, 47),rgb(226, 132, 103));
+}
+.caja{
+    height: 600px;
+    width: 400px;
+    text-align: center;
+    line-height: 500px;
+}
+.caja1{
+    display: flex;
+    text-align: center;
+    font-size: 35px;
+    color: cornsilk;
+}
+.caja2{
+    display: flex;
+    align-items: center;
+}
+.sec1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-content: space-evenly;
+}
+html{
+    scroll-behavior: smooth;
+}
+.link{
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    color: cornsilk;
+    margin: 5px;
+}
+
+/* CODIGO DE LA PAGINA DE LOCALES*/
+
+.sec_locales{
+    height: 500px;
+    width: 100%;
+    color:cornsilk;
+}
+.caja_locales{
+    height: 120px;
+    width: 120px;
+    text-align: center;
+    line-height: 120px;
+}
+.caja2_locales{
+    
+    order: 2;
+    flex-basis: 120px;
+    flex-grow:2;
+    flex-shrink: 3;
+    
+}
+.caja1_locales{
+    order: 3;
+    flex-grow: 4;
+    flex-shrink: 6;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+.sec1_locales{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+}
+
+/* CODIGO DE LA PAGINA DE CONTACTO*/
+
+.informacion{
+    font-size: 40px;
+    padding: 10px;
+    border: solid cornsilk;
+    color: cornsilk;
+}
+.informacion .boton{
+    font-size: 35px;
+    padding: 5px;
+    background-color: cornsilk;
+}
+.informacion .boton_2{
+    font-size: 20px;
+    padding: 5px;
+    background-color: cornsilk;
+}
+.redes{
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    color: cornsilk;
+    margin: 5px;
+}
+.redes_titulo{
+    font-size: 25px;
+    color: cornsilk;
+    padding: 15px;
+}
+.red{
+    display: inline-block;
+    padding-left: 10px;
+}
+
+/* CODIGO PAGINA INDEX ACA ESTA EL GRID + EL MOBILE FIRST */
+
+.index_titulo{
+    color: cornsilk;
+    font-size: 60px;
+    text-align: left;
+    text-transform: capitalize;
+    margin: 15px;
+}
+.index_texto{
+    color: cornsilk;
+    font-size: 50px;
+    text-transform: capitalize;
+    margin: 15px;
+}
+.container{
+    height: 400px;
+    display: grid;
+    column-gap: 10px;
+    row-gap: 10px;
+    margin: 10px;
+}
+.index_caja{
+    border:1px solid cornsilk;   
+}
+.index_foto{
+    height: 100%;
+    width: 100%;
+    transition: transform .2s;
+}
+@media (min-width:480px) {
+    .container{   
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(9,50%);
+    }
+}
+@media (min-width:801px) {
+    .container{   
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(9,50%);
+    }
+}
+@media (min-width:1281px){
+    .container{   
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 100% 100% 100%;
+    }
+}
+.index_caja:hover{
+    transform: scale(1.3);
+}
+
+
+.caro{
+    margin: auto;
+    width: 100%;
+}
